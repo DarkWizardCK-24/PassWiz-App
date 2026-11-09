@@ -1,21 +1,37 @@
-# 🔒 PassWiz
+# PassWiz
 
-Welcome to PassWiz, a Flutter app designed to keep your passwords battle-ready! Test your password strength instantly by estimating brute-force crack time and calculating entropy to measure randomness. Stay secure with this sleek, user-friendly tool built for mobile and web. 🚀
+A Flutter app that tells you how strong a password really is. It estimates how long a brute-force attack would take to crack it and calculates its entropy, with instant feedback as you type.
 
+## Features
 
-# ✨ Features
+- **Strength analysis**: live rating while you type, with a visual strength indicator.
+- **Brute-force crack time**: estimated time to crack the password.
+- **Entropy calculation**: measures how random the password is.
+- **Condition checklist**: shows which rules (length, case, digits, symbols) are met.
+- **Copy button** and a clean, responsive UI for mobile and web.
 
-1. 🔍 Password Strength Analysis: Evaluates how robust your password is.
-2. ⏱️ Brute-Force Crack Time: Estimates the time needed to crack your password.
-3. 📊 Entropy Calculation: Measures password randomness for better security insights.
-4. 📱 Responsive UI: Smooth experience on mobile and web platforms.
-5. ⚡ Instant Feedback: Real-time analysis with clear, actionable results.
+## Tech stack
 
-# 🛠️ Tech Stack
+- Flutter and Dart
+- `google_fonts`, `font_awesome_flutter`, `lottie` for UI and animation
+- Custom entropy and crack-time logic in `lib/models/password_entropy.dart`
 
-1. Flutter & Dart: Cross-platform UI and logic for mobile and web.
-2. Password Analysis Algorithms: Custom logic for brute-force estimation and entropy calculation.
-3. Responsive Design: Optimized for all screen sizes.
+## Project structure
 
+```
+lib/
+  main.dart
+  models/    password_entropy.dart (entropy and crack-time logic)
+  screens/   splash_screen.dart, home_screen.dart
+  theme/     app_theme.dart
+  widgets/   password_input_field, strength_indicator, condition_indicator, copy_button
+```
 
-Crafted with 🔐 by DarkWizardCK
+## Getting started
+
+```bash
+flutter pub get
+flutter run
+```
+
+Requires Flutter with Dart SDK 3.8 or newer.
